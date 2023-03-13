@@ -1,5 +1,6 @@
 package com.thortful.apichallenge.client.model;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
@@ -7,7 +8,7 @@ import lombok.NoArgsConstructor;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PexelPhotosModel {
+public class PexelsPhotosModel {
 
     private long id;
 
@@ -19,13 +20,16 @@ public class PexelPhotosModel {
 
     private String photographer;
 
+    @JsonProperty("photographer_url")
     private String photographerUrl;
 
+    @JsonProperty("photographer_id")
     private long photographerId;
 
+    @JsonProperty("avg_color")
     private String avgColor;
 
-    private PexelSourceModel src;
+    private PexelsSourceModel src;
 
     private boolean liked;
 

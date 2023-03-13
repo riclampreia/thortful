@@ -1,12 +1,13 @@
 package com.thortful.apichallenge.client.model;
 
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.NoArgsConstructor;
 
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class PexelSourceModel {
+public class PexelsSourceModel {
 
     private String original;
 
@@ -22,5 +23,5 @@ public class PexelSourceModel {
 
     private String landscape;
 
-    private Sring tiny;
+    private String tiny;
 }

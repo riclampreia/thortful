@@ -1,3 +1,7 @@
 pexels:
   api-key: szdP0mRMw3tWMRgB3q1BpnRiOMc9tNPjoiUrOqTywO6qjU3YuKoHneTh
   base-url: https://api.pexels.com/v1/
+  endpoint:
+    photos: photos
+    search: search
+    trending: curated
