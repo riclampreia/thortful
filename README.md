@@ -5,12 +5,12 @@
 API to retrieve photos from a 3rd party service named PEXELS [https://www.pexels.com/api/documentation/]
 
 Frameworks and libraries used:
-Spring Boot (starter and web) 3.0.4
-Maven 3.8.1
-Java JDK 19
-Lombok 1.18.26
-Jackson-annotations (from fasterxml) 2.14.2
-IntelliJ as IDE
+- Spring Boot (starter and web) 3.0.4
+- Maven 3.8.1
+- Java JDK 19
+- Lombok 1.18.26
+- Jackson-annotations (from fasterxml) 2.14.2
+- IntelliJ as IDE
 
 Project structure:
 - Parent pom linked with spring boot starter parent
