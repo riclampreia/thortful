@@ -12,6 +12,11 @@ Lombok 1.18.26
 Jackson-annotations (from fasterxml) 2.14.2
 IntelliJ as IDE
 
+Project structure:
+- Parent pom linked with spring boot starter parent
+- thortful-bom (base of materials) -> To aggregate all the library versions
+- thortful-app -> API with RestController and custom PexelsClient
+
 Steps to run:
 - Maven commands to clean and compile
 - Run main application
