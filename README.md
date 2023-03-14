@@ -2,35 +2,22 @@
 
 # Thortful API Challenge
 
+API to retrieve photos from a 3rd party service named PEXELS [https://www.pexels.com/api/documentation/]
 
-Show us what you can do with Spring Boot! 
+Frameworks and libraries used:
+Spring Boot (starter and web) 3.0.4
+Maven 3.8.1
+Java JDK 19
+Lombok 1.18.26
+Jackson-annotations (from fasterxml) 2.14.2
+IntelliJ as IDE
 
-We'd like you to write a small app with the following requirements:
+Steps to run:
+- Maven commands to clean and compile
+- Run main application
+- Application working on port 8080
 
-* Restful API  
-* Use of any 3rd party API services
-* Version of Java you like the most
-* Readme file explaining how to build / run your app.
-
-On the 3rd party API side, the choice is yours, from the Star wars API (https://swapi.co), Github(https://developer.github.com/v3/search/#search-issues), (Random User API (https://randomuser.me), .....
-
-Few notes on the app:
-
-* UI : None, as long as we can call your endpoints with Postman or curl, we're happy 
-* Documentation : README file doesn't have to be long but please help us getting your app in a running state
-* Code : We like code, we like it even more when it's clearly written ;)
-
-We could be sneaky and not say anything else, but here's some things we always like to see:
-
-* Use of cool APIs we never heard about
-* Not having a 500 error on the first boot
-* Not having all your app code in one giant method
-* More than one commit in git
-
-### Submission notes
-
-You can just submit a PR here, create a private repo, or just send us the repo by email. Whatever you prefer.
-
----
-
-[@thortful](https://wwwthortful.com) - 2018
+Available API endpoints:
+- Search for photos with a specific topic(s) -> http://localhost:8080/thortful/topic/{subject}
+- Get the latest trending photos -> http://localhost:8080/thortful/trending
+- Get a specific photo by ID -> http://localhost:8080/thortful/photos/{id}

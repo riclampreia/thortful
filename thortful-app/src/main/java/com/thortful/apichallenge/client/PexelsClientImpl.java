@@ -1,6 +1,7 @@
 package com.thortful.apichallenge.client;
 
 import com.thortful.apichallenge.client.model.PexelsModel;
+import com.thortful.apichallenge.client.model.PexelsPhotosModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -44,20 +45,32 @@ public class PexelsClientImpl implements PexelsClient {
                 .queryParam("query", topic)
                 .build()
                 .toUri();
-
-        HttpEntity<PexelsModel> requestEntity = new HttpEntity<>(createHttpHeaders());
-        return restTemplate.exchange(uri, HttpMethod.GET, requestEntity, PexelsModel.class)
-                .getBody();
+        return callingPexelsAPI(uri, PexelsModel.class);
     }
 
     @Override
     public PexelsModel retrieveTrendingPhotos() {
-        return null;
+        final URI uri = UriComponentsBuilder.fromUriString(baseUrl)
+                .pathSegment(trendingEndpoint)
+                .build()
+                .toUri();
+        return callingPexelsAPI(uri, PexelsModel.class);
     }
 
     @Override
-    public PexelsModel retrievePhotoById(long id) {
-        return null;
+    public PexelsPhotosModel retrievePhotoById(String id){
+        final URI uri = UriComponentsBuilder.fromUriString(baseUrl)
+                .pathSegment(photosEndpoint)
+                .pathSegment(id)
+                .build()
+                .toUri();
+        return callingPexelsAPI(uri, PexelsPhotosModel.class);
+    }
+
+    private <T> T callingPexelsAPI(URI uri, Class<T> clazz) {
+        HttpEntity<PexelsPhotosModel> requestEntity = new HttpEntity<>(createHttpHeaders());
+        return restTemplate.exchange(uri, HttpMethod.GET, requestEntity, clazz)
+                .getBody();
     }
 
     private HttpHeaders createHttpHeaders() {

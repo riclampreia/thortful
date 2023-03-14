@@ -19,7 +19,7 @@ public class PexelsModel {
     @JsonProperty("per_page")
     private int perPage;
 
-    @JsonProperty("photos")
+    @JsonProperty("photos" )
     private PexelsPhotosModel[] photos;
 
     @JsonProperty("next_page")

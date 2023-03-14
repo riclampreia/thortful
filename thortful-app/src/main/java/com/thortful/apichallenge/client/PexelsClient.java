@@ -1,6 +1,7 @@
 package com.thortful.apichallenge.client;
 
 import com.thortful.apichallenge.client.model.PexelsModel;
+import com.thortful.apichallenge.client.model.PexelsPhotosModel;
 import org.springframework.stereotype.Component;
 
 @Component
@@ -10,5 +11,5 @@ public interface PexelsClient {
 
     PexelsModel retrieveTrendingPhotos();
 
-    PexelsModel retrievePhotoById(long id);
+    PexelsPhotosModel retrievePhotoById(String id);
 }
