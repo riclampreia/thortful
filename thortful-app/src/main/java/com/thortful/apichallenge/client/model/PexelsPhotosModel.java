@@ -10,14 +10,19 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class PexelsPhotosModel {
 
+    @JsonProperty("id")
     private long id;
 
+    @JsonProperty("width")
     private int width;
 
+    @JsonProperty("height")
     private int height;
 
+    @JsonProperty("url")
     private String url;
 
+    @JsonProperty("photographer")
     private String photographer;
 
     @JsonProperty("photographer_url")
@@ -29,9 +34,12 @@ public class PexelsPhotosModel {
     @JsonProperty("avg_color")
     private String avgColor;
 
+    @JsonProperty("src")
     private PexelsSourceModel src;
 
+    @JsonProperty("liked")
     private boolean liked;
 
+    @JsonProperty("alt")
     private String alt;
 }

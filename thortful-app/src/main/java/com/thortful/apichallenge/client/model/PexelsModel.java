@@ -13,11 +13,13 @@ public class PexelsModel {
     @JsonProperty("total_results")
     private long totalResults;
 
+    @JsonProperty("page")
     private int page;
 
     @JsonProperty("per_page")
     private int perPage;
 
+    @JsonProperty("photos")
     private PexelsPhotosModel[] photos;
 
     @JsonProperty("next_page")
